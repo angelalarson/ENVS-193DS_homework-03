@@ -1,0 +1,6 @@
+---
+title: "hw3"
+format: html
+---
+
+https://github.com/angelalarson/ENVS-193DS_homework-03
