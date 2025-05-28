@@ -4,3 +4,15 @@ format: html
 ---
 
 https://github.com/angelalarson/ENVS-193DS_homework-03
+
+```{r read in packages}
+library("tidyverse")
+library("here")
+library("flextable")
+library("janitor")
+```
+# Problem 1. Personal Data
+
+## a. Data Summarizing
+
+I could calculate my average daily steps for days that I am on campus and days that I am not on campus because I believe I walk more when I am on campus. Furthermore, I can group hours on campus to low (1-4), medium (4-8), and high (>8) categories, and find the mean steps per day for each category as I believe my steps are higher when I am on campus for longer.
