@@ -134,10 +134,13 @@ I am showing my average steps per day grouped into different amounts of campus t
 
 ## a. Revisit and summarize
 
-This paper is complex and involves many different types of data to address their main research question, however I specifically focused on the use of linear regression to describe the relationship between unit cell volume and ionic composition.
+This paper is complex and involves many different types of data to address their main research question, however I specifically focused on the use of linear regression to describe the relationship between unit cell volume and ionic ratio composition.
 ```{r}
 #| message: false
 knitr::include_graphics("image1.png") # attaching image
 ```
+## b. Visual clarity
+
+The authors visualized their data clearly, it is easy to understand how ionic ratios affect cell unit volume as axes are clearly labeled and corals are grouped by color and shape in a logical way. The authors showed model predictions by including the linear equation and r^2^ value. They do not, however, include p-values or coefficient of determination in the visualization and instead force the reader to search the supplementary.
 
 
