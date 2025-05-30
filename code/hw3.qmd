@@ -10,6 +10,8 @@ library("tidyverse")
 library("here")
 library("flextable")
 library("janitor")
+library("cowplot")
+library("wesanderson")
 ```
 # Problem 1. Personal Data
 
@@ -20,7 +22,68 @@ I can group hours on campus to low (1-4), medium (4-8), and high (>8) categories
 ## b. Visualization
 ```{r}
 personal <- read_csv(
-  here("data", "personal_data_sheet.csv"))
+  here("data", "personal_data_sheet.csv")) # use the here function to read in the csv under a different column
 
+personal_clean <- personal %>% # using 
+  clean_names() %>% # clean the names
+  select(steps, category_9, campus_time) # select specific columns
+
+personal_summary <- personal_clean %>%
+  group_by(category_9) %>%
+  summarise(
+    mean_steps = mean(steps, na.rm = TRUE),
+    sd_steps = sd(steps, na.rm = TRUE),
+    groups = "drop"
+  ) %>% 
+  mutate(category_9 = factor(category_9, levels = c("none", "low", "med", "high")))
+
+GB1 <- wesanderson::wes_palette("GrandBudapest1", n = 4, type = "discrete")
+names(GB1) <- c("none", "low", "med", "high")
+
+ggplot() +
+  # Plot raw data (jittered for visibility)
+  geom_jitter(data = personal_clean,
+              aes(x = category_9, 
+                  y = steps,
+                  color = category_9),
+              width = 0.15, size = 2) +
+  
+  # Plot mean bars
+  geom_col(data = personal_summary,
+           aes(x = category_9, 
+               y = mean_steps, 
+               fill = category_9,
+               color = category_9),
+           width = 0.6, alpha = 0.5) +
+  
+  # Plot error bars for standard deviation
+  geom_errorbar(data = personal_summary,
+                aes(x = category_9,
+                    ymin = mean_steps - sd_steps,
+                    ymax = mean_steps + sd_steps),
+                width = 0.1) +
+  
+  labs(
+    title = "Mean Steps Per Day Grouped by Hours on Campus",
+    x = "Hours on Campus",
+    y = "Mean Number of Steps",
+  ) +
+   
+   scale_x_discrete(labels = c(
+    "high" = "> 8",
+    "low" = "1-4",
+    "med" = "4-8",
+    "none" = "0"
+  )) +
+  
+scale_fill_manual(values = GB1) +
+  
+  scale_color_manual(values = GB1) +
+  
+  theme_cowplot() +
+  theme(
+    legend.position = "none"
+  )
+  
 ```
 
