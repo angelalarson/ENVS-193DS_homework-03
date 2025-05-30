@@ -1,38 +1,38 @@
-﻿Date,Steps,Campus,Exercise,Library,Watch on/off for rugby,Number of classes,Campus time (+/- 30 minutes),Day of Week,Rehearsal
-4/21/25,"10,913",yes,weight lifting,no,NA,1,5:00,Monday,yes
-4/22/25,7503,yes,rugby,yes,no,1,5:00,Tuesday,no
-4/23/25,11917,yes,none,no,NA,2,12:30,Wednesday,yes
-4/24/25,9790,yes,weight lifting,yes,NA,2,12:00,Thursday,no
-4/25/25,5793,yes,stairmaster,no,NA,1,3:00,Friday,no
-4/26/25,5834,no,walk,NA,NA,0,0:00,Saturday,no
-4/27/25,6008,yes,none,no,NA,0,2:30,Sunday,yes
-4/28/25,9969,yes,weight lifting,yes,NA,1,14:00,Monday,no
-4/29/25,10176,yes,rugby,no,no,1,2:30,Tuesday,no
-4/30/25,12845,yes,weightlifting,yes,NA,2,14:00,Wednesday,yes
-5/1/25,12008,yes,stairmaster,yes,NA,2,12:00,Thursday,no
-5/2/25,7022,no,none,NA,NA,1,3:00,Friday,no
-5/3/25,4509,no,none,NA,NA,0,0:00,Saturday,no
-5/4/25,9949,yes,none,no,NA,0,0:00,Sunday,yes
-5/5/25,8673,yes,weights,yes,NA,1,2:30,Monday,no
-5/6/25,9569,yes,stairmaster,yes,NA,1,12:30,Tuesday,no
-5/7/25,14564,yes,weights,yes,NA,2,14:00,Wednesday,yes
-5/8/25,10319,yes,rugby,yes,NA,1,14:00,Thursday,no
-5/9/25,8991,yes,stairmaster,yes,NA,1,5:00,Friday,no
-5/10/25,5761,yes,none,no,NA,0,9:00,Saturday,no
-5/11/25,10736,yes,none,no,NA,0,12:00,Sunday,yes
-5/12/25,4324,yes,weights,yes,NA,1,10:00,Monday,no
-5/13/25,11745,yes,rugby,yes,NA,1,7:00,Tuesday,yes
-5/14/25,8197,yes,weights,yes,NA,2,14:00,Wednesday,no
-5/15/25,12354,yes,rugby,yes,NA,2,5:30,Thursday,no
-5/16/25,6217,yes,weights,yes,NA,1,5:00,Friday,no
-5/17/25,10162,no,walk,NA,NA,0,0:00,Saturday,no
-5/18/25,4849,no,none,NA,NA,0,0:00,Sunday,no
-5/19/25,11477,yes,weights,yes,NA,1,13:00,Monday,yes
-5/20/25,8289,yes,none,yes,NA,1,10:30,Tuesday,no
-5/21/25,14589,yes,weights,yes,NA,2,14:00,Wednesday,yes
-5/22/25,10800,yes,none,yes,NA,2,14:30,Thursday,no
-5/23/25,15911,yes,walk,no,NA,1,1:00,Friday,yes
-5/24/25,6097,no,none,NA,NA,0,0:00,Saturday,no
-5/25/25,5900,yes,none,yes,NA,0,11:00,Sunday,no
-5/26/25,3652,no,none,NA,NA,0,0:00,Monday,no
-5/27/25,7429,yes,walk,no,NA,1,3:00,Tuesday,no
+﻿Date,Steps,Campus,Exercise,Library,Watch on/off for rugby,Number of classes,Campus time,category,Day of Week,Rehearsal,,low,medium,high,,category,avg_hours,avg_steps,stdev
+4/21/25,"10,913",yes,weight lifting,no,NA,1,5,med,Monday,yes,,0:00,0:00,0:00,,low,2.5,8716,3519.106705
+4/22/25,7503,yes,rugby,yes,no,1,5,med,Tuesday,no,,,,,,medium,5.5,"9,621",2454.382509
+4/23/25,11917,yes,none,no,NA,2,12.5,high,Wednesday,yes,,,,,,high,12,10062,2899.298212
+4/24/25,9790,yes,weight lifting,yes,NA,2,12,high,Thursday,no,,,,,,,,,
+4/25/25,5793,yes,stairmaster,no,NA,1,3,low,Friday,no,,,,,,,,,
+4/26/25,5834,no,walk,NA,NA,0,0,none,Saturday,no,,,,,,,,,
+4/27/25,6008,yes,none,no,NA,0,2.5,low,Sunday,yes,,,,,,,,,
+4/28/25,9969,yes,weight lifting,yes,NA,1,14,high,Monday,no,,,,,,,,,
+4/29/25,10176,yes,rugby,no,no,1,2.5,low,Tuesday,no,,,,,,,,,
+4/30/25,12845,yes,weightlifting,yes,NA,2,14,high,Wednesday,yes,,,,,,,,,
+5/1/25,12008,yes,stairmaster,yes,NA,2,12,high,Thursday,no,,,,,,,,,
+5/2/25,7022,no,none,NA,NA,1,3,low,Friday,no,,,,,,,,,
+5/3/25,4509,no,none,NA,NA,0,0,none,Saturday,no,,,,,,,,,
+5/4/25,9949,yes,none,no,NA,0,0,none,Sunday,yes,,,,,,,,,
+5/5/25,8673,yes,weights,yes,NA,1,2.5,low,Monday,no,,,,,,,,,
+5/6/25,9569,yes,stairmaster,yes,NA,1,12.5,high,Tuesday,no,,,,,,,,,
+5/7/25,14564,yes,weights,yes,NA,2,14,high,Wednesday,yes,,,,,,,,,
+5/8/25,10319,yes,rugby,yes,NA,1,14,high,Thursday,no,,,,,,,,,
+5/9/25,8991,yes,stairmaster,yes,NA,1,5,med,Friday,no,,,,,,,,,
+5/10/25,5761,yes,none,no,NA,0,9,high,Saturday,no,,,,,,,,,
+5/11/25,10736,yes,none,no,NA,0,12,high,Sunday,yes,,,,,,,,,
+5/12/25,4324,yes,weights,yes,NA,1,10,high,Monday,no,,,,,,,,,
+5/13/25,11745,yes,rugby,yes,NA,1,7,med,Tuesday,yes,,,,,,,,,
+5/14/25,8197,yes,weights,yes,NA,2,14,high,Wednesday,no,,,,,,,,,
+5/15/25,12354,yes,rugby,yes,NA,2,5.5,med,Thursday,no,,,,,,,,,
+5/16/25,6217,yes,weights,yes,NA,1,5,med,Friday,no,,,,,,,,,
+5/17/25,10162,no,walk,NA,NA,0,0,none,Saturday,no,,,,,,,,,
+5/18/25,4849,no,none,NA,NA,0,0,none,Sunday,no,,,,,,,,,
+5/19/25,11477,yes,weights,yes,NA,1,13,high,Monday,yes,,,,,,,,,
+5/20/25,8289,yes,none,yes,NA,1,10.5,high,Tuesday,no,,,,,,,,,
+5/21/25,14589,yes,weights,yes,NA,2,14,high,Wednesday,yes,,,,,,,,,
+5/22/25,10800,yes,none,yes,NA,2,14.5,high,Thursday,no,,,,,,,,,
+5/23/25,15911,yes,walk,no,NA,1,1,low,Friday,yes,,,,,,,,,
+5/24/25,6097,no,none,NA,NA,0,0,none,Saturday,no,,,,,,,,,
+5/25/25,5900,yes,none,yes,NA,0,11,high,Sunday,no,,,,,,,,,
+5/26/25,3652,no,none,NA,NA,0,0,none,Monday,no,,,,,,,,,
+5/27/25,7429,yes,walk,no,NA,1,3,low,Tuesday,no,,,,,,,,,
