@@ -90,7 +90,7 @@ scale_fill_manual(values = GB1) + # use GB1 for fill color palette
 ```
 ## c. Caption
 
-Figure 1. Mean steps grouped by hours on campus per day into none (0 hours), low (1-4 hours), medium (4-8 hours), and high (>8 hours). Colors represent each group represented. Each bar displays the mean steps per day for each group, with black standard deviation bars. Each point represents an individual steps per day value.
+Figure 1. Mean steps per day grouped by hours on campus. Hours on campus was grouped into four categories: 0 hours (mean = 6436, SD = 2604), 1-4 hours (mean = 8716, SD = 3519), 4-8 hours (mean = 9620, SD = 2454), >8 hours (mean = 10062, SD = 2899). Colors represent each group represented. Each bar displays the mean steps per day for each group, with black standard deviation bars. Each point represents an individual steps per day value.
 
 ## d. Table
 ```{r}
