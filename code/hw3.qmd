@@ -119,7 +119,10 @@ I want to visualize the bar graph I made above, and also compare steps to type o
 
 ## b. Create a sketch on paper
 
-
+```{r}
+#| message: false
+knitr::include_graphics("image2.png") # attaching image
+```
 
 ## c. Make a draft of your visualization
 
