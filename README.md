@@ -1,3 +1,15 @@
 # ENVS-193DS_homework-03
 
-This is my code for homework #3
+## General information
+
+This repo is for my homework 3 assignment and code.
+
+## Data and file information
+
+In the code file exists my quarto document in additon to my images that I placed in this document.
+
+The code here produced a column and jitter plot for my personal data project and a table portraying that same data. 
+
+## Rendered output
+
+Rendered key is here: 
