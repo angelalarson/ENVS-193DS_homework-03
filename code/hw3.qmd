@@ -108,3 +108,22 @@ flextable(personal_table) %>% # create table using flextable and personal_table 
   set_caption("Table 1: Mean Steps Per Day Grouped by Hours on Campus") # add a title
 ```
 
+# Problem 2. Affective Visualization
+
+## a. Description of affective visualization
+
+I want to visualize the bar graph I made above, and also compare steps to type of exercise. I want to incorporate campus visuals and make it based on height to sort of make a skyline image but with campus buildings. I think I could make a pie chart for the exercise, or some other sort of visual to show the ratios of steps to each other for specific exercises. I want to make it personalized to me as well, perhaps buildings that are iconic to UCSB or buildings I spent a lot of time in since they make up the majority of where I spent my time on campus.
+
+## b. Create a sketch on paper
+
+
+
+## c. Make a draft of your visualization
+
+
+
+## d. Write an artist statement
+
+I am showing my average steps per day grouped into different amounts of campus time; none (0 hours), low (1-4 hours), medium (4-8 hours), and high (>8 hours) with standard deviation bars through conceptualizing the different heights (means) of the column graph as different sized buildings/places around campus. Starting at none, my steps are displayed as the Pit which is the rugby field at UCSB and it has no building because it's the lowest, and finishing with the library because it is the tallest building I spent a lot of time in. Additionally, I am showing a pie graph of the average steps per day grouped by exercise type and displaying this as the sun, an essential part of a backdrop and also a source of energy, which I think is kinda fun to loop exercise and energy together. I enjoyed the landscape imagery of Jill Pelto's paintings, so I tired to emulate a sort of backdrop image as well. I will be making a drawing with colored pencils and pen, but using code to visualize the data before drawing it on paper. My process was based on me imagining how I could visualize campus while also displaying the data, and landing on showing general ratios to each other.
+
+
