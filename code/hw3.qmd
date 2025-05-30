@@ -1,6 +1,8 @@
 ---
-title: "hw3"
+title: "Angela Larson Homework 3"
 format: html
+toc: true
+    toc_float: true
 ---
 
 https://github.com/angelalarson/ENVS-193DS_homework-03
