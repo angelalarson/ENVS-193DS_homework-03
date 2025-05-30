@@ -128,6 +128,10 @@ knitr::include_graphics("image2.png") # attaching image
 
 ## c. Make a draft of your visualization
 
+```{r}
+#| message: false
+knitr::include_graphics("image3.png") # attaching image
+```
 
 
 ## d. Write an artist statement
