@@ -24,68 +24,87 @@ I can group hours on campus to low (1-4), medium (4-8), and high (>8) categories
 personal <- read_csv(
   here("data", "personal_data_sheet.csv")) # use the here function to read in the csv under a different column
 
-personal_clean <- personal %>% # using 
+personal_clean <- personal %>% # using personal df
   clean_names() %>% # clean the names
   select(steps, category_9, campus_time) # select specific columns
 
-personal_summary <- personal_clean %>%
-  group_by(category_9) %>%
+personal_summary <- personal_clean %>% # using personal_clean df
+  group_by(category_9) %>% # group by category
   summarise(
-    mean_steps = mean(steps, na.rm = TRUE),
-    sd_steps = sd(steps, na.rm = TRUE),
-    groups = "drop"
+    mean_steps = round(mean(steps, na.rm = TRUE), 0), # average the steps per day and round
+    sd_steps = round(sd(steps, na.rm = TRUE), 0) # find the stdev of steps per day and round
   ) %>% 
-  mutate(category_9 = factor(category_9, levels = c("none", "low", "med", "high")))
+  mutate(category_9 = factor(category_9, levels = c("none", "low", "med", "high"))) # reorder the categories
 
-GB1 <- wesanderson::wes_palette("GrandBudapest1", n = 4, type = "discrete")
-names(GB1) <- c("none", "low", "med", "high")
+GB1 <- wesanderson::wes_palette("GrandBudapest1", n = 4, type = "discrete") # create an object using the wes anderson palette
+names(GB1) <- c("none", "low", "med", "high") # assign specific colors from wes anderson palette
 
 ggplot() +
-  # Plot raw data (jittered for visibility)
-  geom_jitter(data = personal_clean,
-              aes(x = category_9, 
-                  y = steps,
-                  color = category_9),
-              width = 0.15, size = 2) +
+  geom_jitter(data = personal_clean, # jitter plot using personal_clean to include individual points
+              aes(x = category_9, # x is groups of hours on campus per day
+                  y = steps, # number of steps per day
+                  color = category_9), # group color by category of hours per day
+              width = 0.15, size = 2) + # changing width and size of points
+ 
+   geom_col(data = personal_summary, # plotting mean bars with personal summary df for mean and stdev values
+           aes(x = category_9, # x axis is groups of hours on campus per day
+               y = mean_steps, # y is avg steps per day
+               fill = category_9, # fill is by category
+               color = category_9), # color is by category
+           width = 0.6, alpha = 0.5) + # changing width and opacity of columns
   
-  # Plot mean bars
-  geom_col(data = personal_summary,
-           aes(x = category_9, 
-               y = mean_steps, 
-               fill = category_9,
-               color = category_9),
-           width = 0.6, alpha = 0.5) +
-  
-  # Plot error bars for standard deviation
-  geom_errorbar(data = personal_summary,
-                aes(x = category_9,
-                    ymin = mean_steps - sd_steps,
-                    ymax = mean_steps + sd_steps),
-                width = 0.1) +
+  geom_errorbar(data = personal_summary, # adding error bars from personal_summary
+                aes(x = category_9, # separated by category
+                    ymin = mean_steps - sd_steps, # min bars
+                    ymax = mean_steps + sd_steps), # max bars
+                width = 0.1) + # width of stdev end bars
   
   labs(
-    title = "Mean Steps Per Day Grouped by Hours on Campus",
-    x = "Hours on Campus",
-    y = "Mean Number of Steps",
+    title = "Mean Steps Per Day Grouped by Hours on Campus", # change title
+    x = "Hours on Campus", # change x axis
+    y = "Mean Number of Steps", # change y axis
   ) +
    
-   scale_x_discrete(labels = c(
+   scale_x_discrete(labels = c( # change vague labels to more specific, showing hours that characterize them
     "high" = "> 8",
     "low" = "1-4",
     "med" = "4-8",
     "none" = "0"
   )) +
   
-scale_fill_manual(values = GB1) +
+scale_fill_manual(values = GB1) + # use GB1 for fill color palette
   
-  scale_color_manual(values = GB1) +
+  scale_color_manual(values = GB1) + # use GB1 for color palette
   
-  theme_cowplot() +
+  theme_cowplot() + # get rid of lines and gray background
   theme(
-    legend.position = "none"
+    legend.position = "none" # get rid of legend position
   )
   
 ```
 ## c. Caption
 
 Figure 1. Mean steps grouped by hours on campus per day into none (0 hours), low (1-4 hours), medium (4-8 hours), and high (>8 hours). Colors represent each group represented. Each bar displays the mean steps per day for each group, with black standard deviation bars. Each point represents an individual steps per day value.
+
+## d. Table
+```{r}
+personal_table <- personal_summary %>% # create a separate df for the table
+  mutate(
+    category_9 = recode(category_9, # rename vague labels to hour specific labels
+                        "none" = "0",
+                        "low" = "1–4",
+                        "med" = "4–8",
+                        "high" = "> 8")
+  ) %>%
+  rename(
+    `Hours on Campus` = category_9, # rename column names from basic names in df
+    `Mean Steps` = mean_steps,
+    `SD` = sd_steps
+  )
+
+flextable(personal_table) %>% # create table using flextable and personal_table df
+  theme_vanilla() %>% # use vanilla theme
+  autofit() %>% # fit column labels to fit column width
+  set_caption("Table 1: Mean Steps Per Day Grouped by Hours on Campus") # add a title
+```
+
