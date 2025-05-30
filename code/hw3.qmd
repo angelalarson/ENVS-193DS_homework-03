@@ -6,6 +6,7 @@ format: html
 https://github.com/angelalarson/ENVS-193DS_homework-03
 
 ```{r read in packages}
+#| message: false
 library("tidyverse")
 library("here")
 library("flextable")
@@ -21,6 +22,7 @@ I can group hours on campus to low (1-4), medium (4-8), and high (>8) categories
 
 ## b. Visualization
 ```{r}
+#| message: false
 personal <- read_csv(
   here("data", "personal_data_sheet.csv")) # use the here function to read in the csv under a different column
 
@@ -88,6 +90,7 @@ Figure 1. Mean steps grouped by hours on campus per day into none (0 hours), low
 
 ## d. Table
 ```{r}
+#| message: false
 personal_table <- personal_summary %>% # create a separate df for the table
   mutate(
     category_9 = recode(category_9, # rename vague labels to hour specific labels
@@ -125,5 +128,16 @@ I want to visualize the bar graph I made above, and also compare steps to type o
 ## d. Write an artist statement
 
 I am showing my average steps per day grouped into different amounts of campus time; none (0 hours), low (1-4 hours), medium (4-8 hours), and high (>8 hours) with standard deviation bars through conceptualizing the different heights (means) of the column graph as different sized buildings/places around campus. Starting at none, my steps are displayed as the Pit which is the rugby field at UCSB and it has no building because it's the lowest, and finishing with the library because it is the tallest building I spent a lot of time in. Additionally, I am showing a pie graph of the average steps per day grouped by exercise type and displaying this as the sun, an essential part of a backdrop and also a source of energy, which I think is kinda fun to loop exercise and energy together. I enjoyed the landscape imagery of Jill Pelto's paintings, so I tired to emulate a sort of backdrop image as well. I will be making a drawing with colored pencils and pen, but using code to visualize the data before drawing it on paper. My process was based on me imagining how I could visualize campus while also displaying the data, and landing on showing general ratios to each other.
+
+
+# Problem 3. Statistical Critique
+
+## a. Revisit and summarize
+
+This paper is complex and involves many different types of data to address their main research question, however I specifically focused on the use of linear regression to describe the relationship between unit cell volume and ionic composition.
+```{r}
+#| message: false
+knitr::include_graphics("image1.png") # attaching image
+```
 
 
