@@ -145,5 +145,8 @@ The authors visualized their data clearly, it is easy to understand how ionic ra
 
 ## c. Aesthetic clarity
 
-The authors did okay with handling visual clutter as many of the values are overlapping but their use of shape and color allows the reader to mostly view the trends reflected. The data:ink ratio is mostly good, however I will re-emphasize that most of the values overlap each other and reduce the data:ink ratio. I do think they would have benefited from reducing the size of each individual point to provide for more visual space.
+The authors did okay with handling visual clutter as many of the values are overlapping but their use of shape and color allows the reader to mostly view the trends reflected. The data:ink ratio is mostly good, however I will re-emphasize that most of the values overlap each other and reduce the data:ink ratio. I think they did the best they could for what they were trying to achieve.
 
+## d. Recommendations
+
+I would want to see each figure be representative of fewer coral types. I believe the authors would have benefited from splitting the graphs up further by coral type and placing them side by side, so the reader can still compare the values but without the visual clutter. They could also reduce the size of each individual point to allow for more visual space. I do think including p values and the coefficients of determination would've been helpful for understanding the full picture of the data. If there wasn't room in the figure to include these, the figure caption could be utilized. There are so many overlapping values that it is difficult to view the sample size for each coral, so including sample size in the caption wuld have been helpful from a reader's perspective.
