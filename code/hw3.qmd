@@ -1,8 +1,9 @@
 ---
 title: "Angela Larson Homework 3"
-format: html_document:
-toc: true
-    toc_float: true
+format:
+  html:
+    toc: TRUE
+
 ---
 
 https://github.com/angelalarson/ENVS-193DS_homework-03
@@ -15,6 +16,7 @@ library("flextable")
 library("janitor")
 library("cowplot")
 library("wesanderson")
+
 ```
 # Problem 1. Personal Data
 
@@ -131,6 +133,7 @@ knitr::include_graphics("image2.png") # attaching image
 ```{r}
 #| message: false
 knitr::include_graphics("image3.png") # attaching image
+
 ```
 
 
